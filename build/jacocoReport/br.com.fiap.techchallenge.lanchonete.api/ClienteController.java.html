@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClienteController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lanchonete</a> &gt; <a href="index.source.html" class="el_package">br.com.fiap.techchallenge.lanchonete.api</a> &gt; <span class="el_source">ClienteController.java</span></div><h1>ClienteController.java</h1><pre class="source lang-java linenums">package br.com.fiap.techchallenge.lanchonete.api;
+
+import br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapper;
+import br.com.fiap.techchallenge.lanchonete.dtos.inbound.ClienteDTO;
+import br.com.fiap.techchallenge.lanchonete.entities.Cliente;
+import br.com.fiap.techchallenge.lanchonete.interfaces.usecases.ClienteUseCase;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+<span class="fc" id="L16">@RequiredArgsConstructor</span>
+@RequestMapping(&quot;/cliente&quot;)
+public class ClienteController {
+
+    private final ClienteUseCase clienteUseCase;
+    private final ClienteMapper clienteMapper;
+
+    @PostMapping
+    public ResponseEntity&lt;Cliente&gt; criarCliente(@RequestBody @Valid ClienteDTO clienteRequest) throws Exception {
+<span class="fc" id="L25">        var clienteEntity = clienteMapper.toEntity(clienteRequest);</span>
+
+<span class="fc" id="L27">        var novoCliente = clienteUseCase.save(clienteEntity);</span>
+
+<span class="fc" id="L29">        return ResponseEntity.ok(novoCliente);</span>
+    }
+
+    @GetMapping(&quot;/{cpf}&quot;)
+    public ResponseEntity&lt;Cliente&gt; buscarClientePorCpf(@PathVariable(value = &quot;cpf&quot;) String cpf) throws Exception {
+<span class="fc" id="L34">        var cliente = clienteUseCase.buscarClientePorCpf(cpf);</span>
+<span class="fc" id="L35">        return ResponseEntity.ok(cliente);</span>
+    }
+
+    @GetMapping
+    public ResponseEntity&lt;List&lt;Cliente&gt;&gt; listarClientes() throws Exception {
+<span class="fc" id="L40">        var clientes = clienteUseCase.list();</span>
+<span class="fc" id="L41">        return ResponseEntity.ok(clientes);</span>
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Cliente&gt; atualizarCliente(@RequestBody @Validated ClienteDTO clienteRequest,
+                                                    @PathVariable(value = &quot;id&quot;) Integer id) throws Exception {
+<span class="fc" id="L47">        var clienteDomain = clienteMapper.toEntity(clienteRequest);</span>
+<span class="fc" id="L48">        var clienteAtualizado = clienteUseCase.update(id, clienteDomain);</span>
+<span class="fc" id="L49">        return ResponseEntity.ok(clienteAtualizado);</span>
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Integer&gt; deletaCliente(@PathVariable(value = &quot;id&quot;) Integer id) throws Exception {
+<span class="fc" id="L54">        clienteUseCase.delete(id);</span>
+<span class="fc" id="L55">        return ResponseEntity.ok().build();</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

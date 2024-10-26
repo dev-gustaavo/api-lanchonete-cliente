@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-10-26T18:31:03" hostname="gustavo-ubuntu" time="0.041">
+  <properties/>
+  <testcase name="deveRetornarNullQuandoClienteForNull()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.006"/>
+  <testcase name="deveRetornarNullQuandoDtoNull()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.004"/>
+  <testcase name="deveRetornarNullQuandoClienteEntityNull()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.004"/>
+  <testcase name="deveRetornarClienteEntity()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.011"/>
+  <testcase name="deveRetornarObjetoCliente()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.004"/>
+  <testcase name="deveRetornarClienteApartirDeClienteEntity()" classname="br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest" time="0.004"/>
+  <system-out><![CDATA[2024-10-26T15:31:03.283-03:00  INFO 14888 --- [lanchonete] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest]: ClienteMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-26T15:31:03.291-03:00  INFO 14888 --- [lanchonete] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.com.fiap.techchallenge.lanchonete.LanchoneteApplication for test class br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
