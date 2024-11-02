@@ -12,7 +12,7 @@ public interface ClienteUseCase {
 
     List<Cliente> list() throws Exception;
 
-    Cliente update(Integer id, Cliente cliente) throws Exception;
+    Cliente update(String id, Cliente cliente) throws Exception;
 
-    void delete(Integer id) throws Exception;
+    void delete(String id) throws Exception;
 }

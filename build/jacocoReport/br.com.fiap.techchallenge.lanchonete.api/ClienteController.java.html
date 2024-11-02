@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClienteController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lanchonete</a> &gt; <a href="index.source.html" class="el_package">br.com.fiap.techchallenge.lanchonete.api</a> &gt; <span class="el_source">ClienteController.java</span></div><h1>ClienteController.java</h1><pre class="source lang-java linenums">package br.com.fiap.techchallenge.lanchonete.api;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClienteController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lanchonete-cliente</a> &gt; <a href="index.source.html" class="el_package">br.com.fiap.techchallenge.lanchonete.api</a> &gt; <span class="el_source">ClienteController.java</span></div><h1>ClienteController.java</h1><pre class="source lang-java linenums">package br.com.fiap.techchallenge.lanchonete.api;
 
 import br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapper;
 import br.com.fiap.techchallenge.lanchonete.dtos.inbound.ClienteDTO;
@@ -43,14 +43,14 @@ public class ClienteController {
 
     @PutMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Cliente&gt; atualizarCliente(@RequestBody @Validated ClienteDTO clienteRequest,
-                                                    @PathVariable(value = &quot;id&quot;) Integer id) throws Exception {
+                                                    @PathVariable(value = &quot;id&quot;) String id) throws Exception {
 <span class="fc" id="L47">        var clienteDomain = clienteMapper.toEntity(clienteRequest);</span>
 <span class="fc" id="L48">        var clienteAtualizado = clienteUseCase.update(id, clienteDomain);</span>
 <span class="fc" id="L49">        return ResponseEntity.ok(clienteAtualizado);</span>
     }
 
     @DeleteMapping(&quot;/{id}&quot;)
-    public ResponseEntity&lt;Integer&gt; deletaCliente(@PathVariable(value = &quot;id&quot;) Integer id) throws Exception {
+    public ResponseEntity&lt;Integer&gt; deletaCliente(@PathVariable(value = &quot;id&quot;) String id) throws Exception {
 <span class="fc" id="L54">        clienteUseCase.delete(id);</span>
 <span class="fc" id="L55">        return ResponseEntity.ok().build();</span>
     }

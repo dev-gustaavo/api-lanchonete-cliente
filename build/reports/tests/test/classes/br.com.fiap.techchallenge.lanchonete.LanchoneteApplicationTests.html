@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.572s</div>
+<div class="counter">0.854s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">fakeTest()</td>
-<td class="success">0.572s</td>
+<td class="success">0.854s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>15:30:55.595 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests]: LanchoneteApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:30:55.770 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.techchallenge.lanchonete.LanchoneteApplication for test class br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests
+<pre>14:43:15.214 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests]: LanchoneteApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:43:15.392 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.techchallenge.lanchonete.LanchoneteApplication for test class br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -98,31 +98,33 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2024-10-26T15:30:56.521-03:00  INFO 14888 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : Starting LanchoneteApplicationTests using Java 17.0.12 with PID 14888 (started by gtbarbosa in /home/gtbarbosa/Projetos/Pós Graduação/api-lanchonete-cliente)
-2024-10-26T15:30:56.524-03:00  INFO 14888 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : The following 1 profile is active: &quot;test&quot;
-2024-10-26T15:30:57.885-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-26T15:30:57.888-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-10-26T15:30:57.938-03:00  INFO 14888 --- [lanchonete] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface br.com.fiap.techchallenge.lanchonete.interfaces.dbconnection.RepositoryCliente; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-10-26T15:30:57.939-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JDBC repository interfaces.
-2024-10-26T15:30:57.963-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-26T15:30:57.966-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-26T15:30:58.008-03:00  INFO 14888 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
-2024-10-26T15:30:58.649-03:00  INFO 14888 --- [lanchonete] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-26T15:30:58.744-03:00  INFO 14888 --- [lanchonete] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-10-26T15:30:58.799-03:00  INFO 14888 --- [lanchonete] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-26T15:30:59.166-03:00  INFO 14888 --- [lanchonete] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-26T15:30:59.217-03:00  INFO 14888 --- [lanchonete] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-26T15:30:59.668-03:00  INFO 14888 --- [lanchonete] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-10-26T15:30:59.670-03:00  INFO 14888 --- [lanchonete] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-26T15:31:01.118-03:00  INFO 14888 --- [lanchonete] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-Hibernate: drop table if exists clientes cascade 
-Hibernate: drop sequence if exists clientes_seq
-Hibernate: create sequence clientes_seq start with 1 increment by 50
-Hibernate: create table clientes (id integer not null, cpf varchar(255) not null, email varchar(255) not null, nome varchar(255) not null, primary key (id), unique (cpf))
-2024-10-26T15:31:01.174-03:00  INFO 14888 --- [lanchonete] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-26T15:31:01.637-03:00 ERROR 14888 --- [lanchonete] [    Test worker] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.23] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
-2024-10-26T15:31:01.946-03:00  WARN 14888 --- [lanchonete] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-26T15:31:02.680-03:00  INFO 14888 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : Started LanchoneteApplicationTests in 6.65 seconds (process running for 8.404)
+2024-11-02T14:43:16.079-03:00  INFO 32591 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : Starting LanchoneteApplicationTests using Java 17.0.12 with PID 32591 (started by gtbarbosa in /home/gtbarbosa/Projetos/Pós Graduação/api-lanchonete-cliente)
+2024-11-02T14:43:16.081-03:00  INFO 32591 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : The following 1 profile is active: &quot;test&quot;
+2024-11-02T14:43:17.114-03:00  INFO 32591 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-02T14:43:17.189-03:00  INFO 32591 --- [lanchonete] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 MongoDB repository interface.
+2024-11-02T14:43:17.775-03:00  INFO 32591 --- [lanchonete] [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|sync|spring-boot&quot;, &quot;version&quot;: &quot;4.11.2&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Linux&quot;, &quot;name&quot;: &quot;Linux&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;5.15.0-124-generic&quot;}, &quot;platform&quot;: &quot;Java/Ubuntu/17.0.12+7-Ubuntu-1ubuntu220.04&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='user', source='admin', password=&lt;hidden&gt;, mechanismProperties=&lt;hidden&gt;}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@75707f05, com.mongodb.Jep395RecordCodecProvider@741f8cf, com.mongodb.KotlinCodecProvider@2926144f]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[mongo-db:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-02T14:43:17.785-03:00  INFO 32591 --- [lanchonete] [-mongo-db:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server mongo-db:27017
+
+com.mongodb.MongoSocketException: mongo-db
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:221) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.ServerAddressWithResolver.getSocketAddresses(ServerAddressWithResolver.java:68) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193) ~[mongodb-driver-core-4.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153) ~[mongodb-driver-core-4.11.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.net.UnknownHostException: mongo-db
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:887) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:213) ~[mongodb-driver-core-4.11.2.jar:na]
+	... 7 common frames omitted
+
+2024-11-02T14:43:18.154-03:00 ERROR 32591 --- [lanchonete] [    Test worker] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.23] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-11-02T14:43:18.790-03:00  INFO 32591 --- [lanchonete] [    Test worker] b.c.f.t.l.LanchoneteApplicationTests     : Started LanchoneteApplicationTests in 3.162 seconds (process running for 5.144)
 </pre>
 </span>
 </div>
@@ -134,7 +136,7 @@ Hibernate: create table clientes (id integer not null, cpf varchar(255) not null
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.7</a> at 26 de out. de 2024 15:31:05</p>
+<a href="http://www.gradle.org">Gradle 8.7</a> at 2 de nov. de 2024 14:43:21</p>
 </div>
 </div>
 </body>
