@@ -1,7 +1,7 @@
 package br.com.fiap.techchallenge.lanchonete.adapters.handlers;
 
-import br.com.fiap.techchallenge.lanchonete.entities.ErrorResponse;
-import jakarta.persistence.EntityNotFoundException;
+import br.com.fiap.techchallenge.lanchonete.entities.ErroResponse;
+import br.com.fiap.techchallenge.lanchonete.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -17,14 +17,14 @@ import java.util.Map;
 public class CustomExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleExceptionGenerica(Exception ex) {
-        var errorResponse = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
+    public ResponseEntity<ErroResponse> handleExceptionGenerica(Exception ex) {
+        var errorResponse = new ErroResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleEntityNotFoundException(EntityNotFoundException ex) {
-        var errorResponse = new ErrorResponse(HttpStatus.NOT_FOUND.value(), ex.getMessage());
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErroResponse> handleResourceNotFoundException(ResourceNotFoundException ex) {
+        var errorResponse = new ErroResponse(HttpStatus.NOT_FOUND.value(), ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
 

@@ -43,14 +43,14 @@ public class ClienteController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> atualizarCliente(@RequestBody @Validated ClienteDTO clienteRequest,
-                                                    @PathVariable(value = "id") Integer id) throws Exception {
+                                                    @PathVariable(value = "id") String id) throws Exception {
         var clienteDomain = clienteMapper.toEntity(clienteRequest);
         var clienteAtualizado = clienteUseCase.update(id, clienteDomain);
         return ResponseEntity.ok(clienteAtualizado);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Integer> deletaCliente(@PathVariable(value = "id") Integer id) throws Exception {
+    public ResponseEntity<Integer> deletaCliente(@PathVariable(value = "id") String id) throws Exception {
         clienteUseCase.delete(id);
         return ResponseEntity.ok().build();
     }

@@ -4,9 +4,9 @@ import br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapper;
 import br.com.fiap.techchallenge.lanchonete.entities.Cliente;
 import br.com.fiap.techchallenge.lanchonete.entities.MensagemErroPadrao;
 import br.com.fiap.techchallenge.lanchonete.entities.dbEntities.ClienteEntity;
+import br.com.fiap.techchallenge.lanchonete.exceptions.ResourceNotFoundException;
 import br.com.fiap.techchallenge.lanchonete.interfaces.dbconnection.RepositoryCliente;
 import br.com.fiap.techchallenge.lanchonete.interfaces.gateways.ClienteGateway;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -42,10 +42,10 @@ public class ClienteGatewayImpl implements ClienteGateway {
             if (clienteEntityOptional.isPresent())
                 return clienteMapper.fromDbEntityToEntity(clienteEntityOptional.get());
 
-            throw new EntityNotFoundException(String.format(MensagemErroPadrao.CLIENTE_NAO_ENCONTRADO_CPF, cpf));
+            throw new ResourceNotFoundException(String.format(MensagemErroPadrao.CLIENTE_NAO_ENCONTRADO_CPF, cpf));
 
-        } catch (EntityNotFoundException entityNotFoundException) {
-            throw new EntityNotFoundException(entityNotFoundException.getLocalizedMessage(), entityNotFoundException);
+        } catch (ResourceNotFoundException ResourceNotFoundException) {
+            throw new ResourceNotFoundException(ResourceNotFoundException.getLocalizedMessage());
         } catch (Exception exception) {
             throw new Exception(exception.getMessage(), exception);
         }
@@ -60,29 +60,29 @@ public class ClienteGatewayImpl implements ClienteGateway {
                     .map(clienteMapper::fromDbEntityToEntity)
                     .collect(Collectors.toList());
 
-        } catch (EntityNotFoundException entityNotFoundException) {
-            throw new EntityNotFoundException(MensagemErroPadrao.LISTA_CLIENTE_VAZIA);
+        } catch (ResourceNotFoundException ResourceNotFoundException) {
+            throw new ResourceNotFoundException(MensagemErroPadrao.LISTA_CLIENTE_VAZIA);
         } catch (Exception exception) {
             throw new Exception(MensagemErroPadrao.ERRO_GENERICO, exception);
         }
     }
 
     @Override
-    public Cliente updateCliente(Integer id, Cliente cliente) throws Exception {
+    public Cliente updateCliente(String id, Cliente cliente) throws Exception {
 
         try {
             var clienteEntityOptional = repositoryCliente.findById(id);
             var clienteEntity = aplicaAlteracoes(cliente, clienteEntityOptional);
             return clienteMapper.fromDbEntityToEntity(clienteEntity);
-        } catch (EntityNotFoundException entityNotFoundException) {
-            throw new EntityNotFoundException(MensagemErroPadrao.CLIENTE_NAO_ENCONTRADO_ATUALIZACAO);
+        } catch (ResourceNotFoundException ResourceNotFoundException) {
+            throw new ResourceNotFoundException(MensagemErroPadrao.CLIENTE_NAO_ENCONTRADO_ATUALIZACAO);
         } catch (Exception exception) {
             throw new Exception(MensagemErroPadrao.ERRO_GENERICO, exception);
         }
     }
 
     @Override
-    public void delete(Integer id) throws Exception {
+    public void delete(String id) throws Exception {
         try {
             repositoryCliente.deleteById(id);
         } catch (Exception exception) {
@@ -92,7 +92,7 @@ public class ClienteGatewayImpl implements ClienteGateway {
 
     private ClienteEntity aplicaAlteracoes(Cliente cliente, Optional<ClienteEntity> clienteEntityOptional) {
         if (clienteEntityOptional.isEmpty())
-            throw new EntityNotFoundException();
+            throw new ResourceNotFoundException(MensagemErroPadrao.CLIENTE_NAO_ENCONTRADO_ATUALIZACAO);
 
         var clienteEntity = clienteEntityOptional.get();
         clienteEntity = clienteMapper.toDbEntity(cliente);

@@ -116,7 +116,7 @@ public class ClienteControllerTest {
         when(clienteMapper.toEntity(any())).thenReturn(clienteMock);
         when(clienteUseCase.update(any(), any())).thenReturn(clienteMock);
 
-        var result = clienteController.atualizarCliente(clienteDtomock, 1);
+        var result = clienteController.atualizarCliente(clienteDtomock, "1");
         var body = result.getBody();
 
         assertAll(
@@ -133,14 +133,14 @@ public class ClienteControllerTest {
         when(clienteMapper.toEntity(any())).thenReturn(clienteMock);
         when(clienteUseCase.update(any(), any())).thenThrow(new Exception("erro"));
 
-        assertThrows(Exception.class, () -> clienteController.atualizarCliente(clienteDtomock, 1));
+        assertThrows(Exception.class, () -> clienteController.atualizarCliente(clienteDtomock, "1"));
     }
 
     @Test
     @Description("Deve deletar um cliente com sucesso")
     void deletarClienteTest() throws Exception {
         doNothing().when(clienteUseCase).delete(any());
-        var result = clienteController.deletaCliente(1);
+        var result = clienteController.deletaCliente("1");
         assertEquals(result.getStatusCode().value(), HttpStatus.OK.value());
     }
 
@@ -148,6 +148,6 @@ public class ClienteControllerTest {
     @Description("Deve retornar uma exception ao tentar deletar um cliente")
     void deveRetornarUmaExceptionAoTentarDeletarCliente() throws Exception {
         doThrow(new Exception("erro")).when(clienteUseCase).delete(any());
-        assertThrows(Exception.class, () -> clienteController.deletaCliente(1));
+        assertThrows(Exception.class, () -> clienteController.deletaCliente("1"));
     }
 }
