@@ -1,9 +1,9 @@
 package br.com.fiap.techchallenge.lanchonete.usecases;
 
 import br.com.fiap.techchallenge.lanchonete.entities.Cliente;
+import br.com.fiap.techchallenge.lanchonete.exceptions.ResourceNotFoundException;
 import br.com.fiap.techchallenge.lanchonete.interfaces.gateways.ClienteGateway;
 import br.com.fiap.techchallenge.lanchonete.mocks.ClienteMock;
-import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -33,7 +33,7 @@ public class ClienteUseCaseImplTest {
     @Test
     @Description("Deve salvar um cliente")
     void deveSalvarCliente() throws Exception {
-        when(clienteGateway.buscarClientePorCpf(anyString())).thenThrow(new EntityNotFoundException());
+        when(clienteGateway.buscarClientePorCpf(anyString())).thenThrow(new ResourceNotFoundException(""));
         when(clienteGateway.save(any())).thenReturn(clienteMock);
 
         var result = clienteUseCase.save(clienteMock);
@@ -120,11 +120,11 @@ public class ClienteUseCaseImplTest {
     @Test
     @Description("Deve fazer update no cliente")
     void deveFazerUpdateNoCliente() throws Exception {
-        when(clienteGateway.updateCliente(anyInt(), any())).thenReturn(clienteMock);
+        when(clienteGateway.updateCliente(anyString(), any())).thenReturn(clienteMock);
 
-        var result = clienteUseCase.update(1, clienteMock);
+        var result = clienteUseCase.update("1", clienteMock);
 
-        verify(clienteGateway, times(1)).updateCliente(anyInt(), any());
+        verify(clienteGateway, times(1)).updateCliente(anyString(), any());
 
         assertAll(
                 () -> assertNotNull(result),
@@ -137,23 +137,23 @@ public class ClienteUseCaseImplTest {
     @Test
     @Description("Deve retornar Exception ao tentar fazer update no cliente")
     void deveRetornarExceptionAoTentarFazerUpdateNoCliente() throws Exception {
-        when(clienteGateway.updateCliente(anyInt(), any())).thenThrow(new Exception());
+        when(clienteGateway.updateCliente(anyString(), any())).thenThrow(new Exception());
 
-        assertThrows(Exception.class, () -> clienteUseCase.update(1, clienteMock));
+        assertThrows(Exception.class, () -> clienteUseCase.update("1", clienteMock));
     }
 
     @Test
     @Description("Deve deletar um cliente")
     void deveDeletarUmCliente() throws Exception {
-        clienteUseCase.delete(1);
-        verify(clienteGateway, times(1)).delete(anyInt());
+        clienteUseCase.delete("1");
+        verify(clienteGateway, times(1)).delete(anyString());
     }
 
     @Test
     @Description("Deve retornar Exception ao tentar deletar um cliente")
     void deveRetornarExceptionAoTentarDeletarUmCliente() throws Exception {
-        doThrow(new Exception()).when(clienteGateway).delete(anyInt());
+        doThrow(new Exception()).when(clienteGateway).delete(anyString());
 
-        assertThrows(Exception.class, () -> clienteUseCase.delete(1));
+        assertThrows(Exception.class, () -> clienteUseCase.delete("1"));
     }
 }

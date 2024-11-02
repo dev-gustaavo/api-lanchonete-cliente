@@ -2,9 +2,9 @@ package br.com.fiap.techchallenge.lanchonete.usecases;
 
 import br.com.fiap.techchallenge.lanchonete.entities.Cliente;
 import br.com.fiap.techchallenge.lanchonete.entities.MensagemErroPadrao;
+import br.com.fiap.techchallenge.lanchonete.exceptions.ResourceNotFoundException;
 import br.com.fiap.techchallenge.lanchonete.interfaces.gateways.ClienteGateway;
 import br.com.fiap.techchallenge.lanchonete.interfaces.usecases.ClienteUseCase;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class ClienteUseCaseImpl implements ClienteUseCase {
             clienteGateway.buscarClientePorCpf(cliente.getCpf());
 
             throw new Exception(MensagemErroPadrao.CLIENTE_CADASTRADO);
-        } catch (EntityNotFoundException entityNotFoundException) {
+        } catch (ResourceNotFoundException ResourceNotFoundException) {
             return clienteGateway.save(cliente);
         } catch (Exception exception) {
             throw new Exception(exception.getMessage(), exception);
@@ -41,12 +41,12 @@ public class ClienteUseCaseImpl implements ClienteUseCase {
     }
 
     @Override
-    public Cliente update(Integer id, Cliente cliente) throws Exception {
+    public Cliente update(String id, Cliente cliente) throws Exception {
         return clienteGateway.updateCliente(id, cliente);
     }
 
     @Override
-    public void delete(Integer id) throws Exception {
+    public void delete(String id) throws Exception {
         clienteGateway.delete(id);
     }
 }
