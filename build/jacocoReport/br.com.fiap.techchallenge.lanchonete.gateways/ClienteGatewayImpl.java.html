@@ -68,10 +68,10 @@ public class ClienteGatewayImpl implements ClienteGateway {
     }
 
     @Override
-    public Cliente updateCliente(String id, Cliente cliente) throws Exception {
+    public Cliente updateCliente(String cpf, Cliente cliente) throws Exception {
 
         try {
-<span class="fc" id="L74">            var clienteEntityOptional = repositoryCliente.findById(id);</span>
+<span class="fc" id="L74">            var clienteEntityOptional = repositoryCliente.findByCpf(cpf);</span>
 <span class="fc" id="L75">            var clienteEntity = aplicaAlteracoes(cliente, clienteEntityOptional);</span>
 <span class="fc" id="L76">            return clienteMapper.fromDbEntityToEntity(clienteEntity);</span>
 <span class="fc" id="L77">        } catch (ResourceNotFoundException ResourceNotFoundException) {</span>
@@ -82,9 +82,9 @@ public class ClienteGatewayImpl implements ClienteGateway {
     }
 
     @Override
-    public void delete(String id) throws Exception {
+    public void delete(String cpf) throws Exception {
         try {
-<span class="fc" id="L87">            repositoryCliente.deleteById(id);</span>
+<span class="fc" id="L87">            repositoryCliente.deleteByCpf(cpf);</span>
 <span class="fc" id="L88">        } catch (Exception exception) {</span>
 <span class="fc" id="L89">            throw new Exception(MensagemErroPadrao.ERRO_GENERICO, exception);</span>
 <span class="fc" id="L90">        }</span>

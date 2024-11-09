@@ -41,12 +41,12 @@ public class ClienteUseCaseImpl implements ClienteUseCase {
     }
 
     @Override
-    public Cliente update(String id, Cliente cliente) throws Exception {
-        return clienteGateway.updateCliente(id, cliente);
+    public Cliente update(String cpf, Cliente cliente) throws Exception {
+        return clienteGateway.updateCliente(cpf, cliente);
     }
 
     @Override
-    public void delete(String id) throws Exception {
-        clienteGateway.delete(id);
+    public void delete(String cpf) throws Exception {
+        clienteGateway.delete(cpf);
     }
 }

@@ -156,14 +156,14 @@ public class ClienteGatewayImplTest {
     @Test
     @Description("Deve alterar um cliente no banco de dados")
     void deveAlterarClienteBancoDados() throws Exception {
-        when(repositoryCliente.findById(anyString())).thenReturn(Optional.ofNullable(clienteEntityMock));
+        when(repositoryCliente.findByCpf(anyString())).thenReturn(Optional.ofNullable(clienteEntityMock));
         when(repositoryCliente.save(any())).thenReturn(clienteEntityMock);
         when(clienteMapper.fromDbEntityToEntity(any())).thenReturn(clienteMock);
         when(clienteMapper.toDbEntity(any())).thenReturn(clienteEntityMock);
 
         var result = clienteGateway.updateCliente("1", clienteMock);
 
-        verify(repositoryCliente, times(1)).findById(any());
+        verify(repositoryCliente, times(1)).findByCpf(any());
         verify(repositoryCliente, times(1)).save(any());
         verify(clienteMapper, times(1)).fromDbEntityToEntity(any());
         verify(clienteMapper, times(1)).toDbEntity(any());
@@ -178,11 +178,11 @@ public class ClienteGatewayImplTest {
     @Test
     @Description("Deve retornar ResourceNotFoundException ao tentar alterar um cliente no banco de dados")
     void deveRetornarResourceNotFoundExceptionAoTentarAlterarClienteBancoDados() throws Exception {
-        when(repositoryCliente.findById(anyString())).thenReturn(Optional.empty());
+        when(repositoryCliente.findByCpf(anyString())).thenReturn(Optional.empty());
 
         assertThrows(ResourceNotFoundException.class, () -> clienteGateway.updateCliente("1", clienteMock));
 
-        verify(repositoryCliente, times(1)).findById(any());
+        verify(repositoryCliente, times(1)).findByCpf(any());
         verify(repositoryCliente, times(0)).save(any());
         verify(clienteMapper, times(0)).fromDbEntityToEntity(any());
         verify(clienteMapper, times(0)).toDbEntity(any());
@@ -190,12 +190,12 @@ public class ClienteGatewayImplTest {
 
     @Test
     @Description("Deve retornar exception ao tentar alterar um cliente no banco de dados")
-    void deveRetornarExceptionAoTentarAlterarUmClienteNoBancoDeDados() {
-        when(repositoryCliente.findById(anyString())).thenThrow(new RuntimeException());
+    void deveRetornarExceptionAoTentarAlterarUmClienteNoBancoDeDados() throws Exception {
+        when(repositoryCliente.findByCpf(anyString())).thenThrow(new RuntimeException());
 
         assertThrows(Exception.class, () -> clienteGateway.updateCliente("1", clienteMock));
 
-        verify(repositoryCliente, times(1)).findById(any());
+        verify(repositoryCliente, times(1)).findByCpf(any());
         verify(repositoryCliente, times(0)).save(any());
         verify(clienteMapper, times(0)).fromDbEntityToEntity(any());
         verify(clienteMapper, times(0)).toDbEntity(any());
@@ -204,7 +204,7 @@ public class ClienteGatewayImplTest {
     @Test
     @Description("Deve retornar Exception ao tentar deletar um cliente do banco de dados")
     void deveRetornarExceptionAoTentarDeletarUmClienteDoBancoDeDados() {
-        doThrow(new RuntimeException()).when(repositoryCliente).deleteById(anyString());
+        doThrow(new RuntimeException()).when(repositoryCliente).deleteByCpf(anyString());
 
         assertThrows(Exception.class, () -> clienteGateway.delete("1"));
     }
@@ -213,7 +213,7 @@ public class ClienteGatewayImplTest {
     @Description("Deve deletar um cliente")
     void deveDeletarUmCliente() throws Exception {
         clienteGateway.delete("1");
-        verify(repositoryCliente, times(1)).deleteById(anyString());
+        verify(repositoryCliente, times(1)).deleteByCpf(anyString());
     }
 
     @Test
