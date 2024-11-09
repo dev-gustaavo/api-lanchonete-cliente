@@ -4,6 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.4'
 	id 'jacoco'
 	id 'info.solidsoft.pitest' version '1.7.0'
+	id 'se.thinkcode.cucumber-runner' version '0.0.11'
 }
 
 group = 'br.com.fiap.tech-challenge'
@@ -36,6 +37,15 @@ dependencies {
 	testImplementation 'junit:junit:4.13.2'
 	testImplementation 'org.mockito:mockito-core:5.12.0'
 	testImplementation 'com.h2database:h2'
+	testImplementation 'io.cucumber:cucumber-java:7.11.0'
+	testImplementation 'io.cucumber:cucumber-spring:7.11.0'
+	testImplementation 'io.cucumber:cucumber-junit:7.11.0'
+	testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.11.0'
+	testImplementation 'org.junit.platform:junit-platform-suite-api:1.9.3'
+	testImplementation 'io.rest-assured:spring-mock-mvc:5.4.0'
+	testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+	testImplementation 'io.rest-assured:rest-assured:5.4.0'
+	testImplementation 'io.qameta.allure:allure-rest-assured:2.23.0'
 }
 
 

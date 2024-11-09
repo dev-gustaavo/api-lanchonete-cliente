@@ -12,7 +12,7 @@ public interface ClienteGateway {
 
     List<Cliente> list() throws Exception;
 
-    Cliente updateCliente(String id, Cliente cliente) throws Exception;
+    Cliente updateCliente(String cpf, Cliente cliente) throws Exception;
 
-    void delete(String id) throws Exception;
+    void delete(String cpf) throws Exception;
 }
