@@ -85,7 +85,7 @@ jobs:
           java-version: '17'
 
       - name: SonarQube Análise
-        uses: ./gradlew sonarquebe -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew sonarquebe -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 
   criacao-pr-develop:
     name: "Criação do PR para branch develop"
