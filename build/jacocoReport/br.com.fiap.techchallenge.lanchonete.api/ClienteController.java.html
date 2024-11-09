@@ -41,17 +41,17 @@ public class ClienteController {
 <span class="fc" id="L41">        return ResponseEntity.ok(clientes);</span>
     }
 
-    @PutMapping(&quot;/{id}&quot;)
+    @PutMapping(&quot;/{cpf}&quot;)
     public ResponseEntity&lt;Cliente&gt; atualizarCliente(@RequestBody @Validated ClienteDTO clienteRequest,
-                                                    @PathVariable(value = &quot;id&quot;) String id) throws Exception {
+                                                    @PathVariable(value = &quot;cpf&quot;) String cpf) throws Exception {
 <span class="fc" id="L47">        var clienteDomain = clienteMapper.toEntity(clienteRequest);</span>
-<span class="fc" id="L48">        var clienteAtualizado = clienteUseCase.update(id, clienteDomain);</span>
+<span class="fc" id="L48">        var clienteAtualizado = clienteUseCase.update(cpf, clienteDomain);</span>
 <span class="fc" id="L49">        return ResponseEntity.ok(clienteAtualizado);</span>
     }
 
-    @DeleteMapping(&quot;/{id}&quot;)
-    public ResponseEntity&lt;Integer&gt; deletaCliente(@PathVariable(value = &quot;id&quot;) String id) throws Exception {
-<span class="fc" id="L54">        clienteUseCase.delete(id);</span>
+    @DeleteMapping(&quot;/{cpf}&quot;)
+    public ResponseEntity&lt;Integer&gt; deletaCliente(@PathVariable(value = &quot;cpf&quot;) String cpf) throws Exception {
+<span class="fc" id="L54">        clienteUseCase.delete(cpf);</span>
 <span class="fc" id="L55">        return ResponseEntity.ok().build();</span>
     }
 }
