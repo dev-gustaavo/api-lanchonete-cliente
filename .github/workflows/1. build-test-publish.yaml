@@ -74,20 +74,6 @@ jobs:
       - bdd
       - build_and_test
 
-    services:
-      sonar:
-        image: sonarqube:community
-        ports:
-          - 9000:9000
-        options: >-
-          --health-cmd="curl --silent --fail localhost:9000/api/health"
-          --health-timeout=30s
-          --health-retries=3
-        env:
-          SONARQUBE_JDBC_URL: jdbc:postgresql://localhost:5432/sonar
-          SONARQUBE_JDBC_USERNAME: sonar
-          SONARQUBE_JDBC_PASSWORD: sonar
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -98,10 +84,29 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Subindo o SonarQube
+      - name: Instalação do Docker
         run: |
-          docker-compose -f docker-compose-sonar.yml up -d
-          sleep 120
+          sudo apt-get update
+          sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+      - name: Instalação do Docker Compose
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Pull Sonar image
+        run: docker pull sonarqube:community
+
+      - name: Subindo o container
+        run: docker run -d -p 9000:9000 sonarqube:community
+
+      - name: Aguardando até a aplicação subir
+        run: sleep 180
 
       - name: Gerar token do SonarQube
         id: sonar-token
