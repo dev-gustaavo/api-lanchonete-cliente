@@ -74,6 +74,20 @@ jobs:
       - bdd
       - build_and_test
 
+    services:
+      sonar:
+        image: sonarqube:latest
+        ports:
+          - 9000:9000
+        options: >-
+          --health-cmd="curl --silent --fail localhost:9000/api/health"
+          --health-timeout=30s
+          --health-retries=3
+        env:
+          SONARQUBE_JDBC_URL: jdbc:postgresql://localhost:5432/sonar
+          SONARQUBE_JDBC_USERNAME: sonar
+          SONARQUBE_JDBC_PASSWORD: sonar
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -84,8 +98,22 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: SonarQube Análise
-        run: ./gradlew sonarqube -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+      - name: Subindo o SonarQube
+        run: |
+          docker-compose -f docker-compose-sonar.yml up -d
+          sleep 120
+
+      - name: Gerar token do SonarQube
+        id: sonar-token
+        run: |
+          TOKEN=$(curl -u admin:admin --data "name=sonar-token" --data "permissions=admin" "http://localhost:9000/api/user_tokens/generate")
+          echo "SONAR_TOKEN=$TOKEN" >> $GITHUB_ENV
+
+      - name: Run SonarQube analysis
+        run: ./gradlew sonarqube -Dsonar.login=${{ env.SONAR_TOKEN }} -Dsonar.host.url=http://localhost:9000
+
+      - name: Stop SonarQube container
+        run: docker-compose -f docker-compose-sonar.yml down
 
   criacao-pr-develop:
     name: "Criação do PR para branch develop"
