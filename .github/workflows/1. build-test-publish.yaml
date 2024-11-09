@@ -115,7 +115,7 @@ jobs:
           echo "SONAR_TOKEN=$TOKEN" >> $GITHUB_ENV
 
       - name: Run SonarQube analysis
-        run: ./gradlew sonarqube -Dsonar.login=${{ env.SONAR_TOKEN }} -Dsonar.host.url=http://localhost:9000
+        run: ./gradlew sonarqube -Dsonar.token=${{ env.SONAR_TOKEN }} -Dsonar.host.url=http://localhost:9000
 
       - name: Stop SonarQube container
         run: docker-compose -f docker-compose-sonar.yml down
