@@ -70,7 +70,9 @@ jobs:
   sonar-analise:
     name: "Análise do SonarQube"
     runs-on: ubuntu-latest
-    needs: bdd
+    needs:
+      - bdd
+      - build_and_test
 
     steps:
       - name: Checkout code
