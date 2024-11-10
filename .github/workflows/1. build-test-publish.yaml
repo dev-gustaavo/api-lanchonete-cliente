@@ -103,7 +103,7 @@ jobs:
         run: docker pull sonarqube:community
 
       - name: Subindo o container
-        run: docker run -d -p 9000:9000 sonarqube:community
+        run: docker run --name sonar -d -p 9000:9000 sonarqube:community
 
       - name: Aguardando até a aplicação subir
         run: sleep 180
@@ -122,7 +122,7 @@ jobs:
         run: ./gradlew sonarqube -Dsonar.token=${{ env.SONAR_TOKEN }} -Dsonar.host.url=http://localhost:9000
 
       - name: Stop SonarQube container
-        run: docker-compose -f docker-compose-sonar.yml down
+        run: docker stop sonar
 
   criacao-pr-develop:
     name: "Criação do PR para branch develop"
