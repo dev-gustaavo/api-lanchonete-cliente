@@ -108,10 +108,14 @@ jobs:
       - name: Aguardando até a aplicação subir
         run: sleep 180
 
+      - name: Instalar jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Gerar token do SonarQube
         id: sonar-token
         run: |
-          TOKEN=$(curl -u admin:admin --data "name=sonar-token" --data "permissions=admin" "http://localhost:9000/api/user_tokens/generate")
+          RESPONSE=$(curl -u admin:admin --data "name=sonar-token" --data "permissions=admin" "http://localhost:9000/api/user_tokens/generate")
+          TOKEN=$(echo $RESPONSE | jq -r '.token')
           echo "SONAR_TOKEN=$TOKEN" >> $GITHUB_ENV
 
       - name: Run SonarQube analysis
