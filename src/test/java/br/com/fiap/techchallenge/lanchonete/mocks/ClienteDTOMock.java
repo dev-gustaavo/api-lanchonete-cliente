@@ -7,7 +7,7 @@ public class ClienteDTOMock {
     public static ClienteDTO getClienteDTO() {
         return new ClienteDTO()
                 .setNome("Gustavo")
-                .setCpf("01234567890")
+                .setCpf("99999999999")
                 .setEmail("teste@teste.com.br");
     }
 }

@@ -41,13 +41,13 @@ public class ClienteUseCaseImpl implements ClienteUseCase {
     }
 
     @Override
-    public Cliente update(String id, Cliente cliente) throws Exception {
-<span class="fc" id="L45">        return clienteGateway.updateCliente(id, cliente);</span>
+    public Cliente update(String cpf, Cliente cliente) throws Exception {
+<span class="fc" id="L45">        return clienteGateway.updateCliente(cpf, cliente);</span>
     }
 
     @Override
-    public void delete(String id) throws Exception {
-<span class="fc" id="L50">        clienteGateway.delete(id);</span>
+    public void delete(String cpf) throws Exception {
+<span class="fc" id="L50">        clienteGateway.delete(cpf);</span>
 <span class="fc" id="L51">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

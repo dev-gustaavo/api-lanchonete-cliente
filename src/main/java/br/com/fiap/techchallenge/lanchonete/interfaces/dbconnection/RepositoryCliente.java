@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface RepositoryCliente extends MongoRepository<ClienteEntity, String> {
 
     Optional<ClienteEntity> findByCpf(String cpf) throws Exception;
+
+    void deleteByCpf(String cpf);
 }

@@ -5,126 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="674b5a55-cb44-496f-b3bc-05088e507b44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/adapters/handlers/CustomExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/adapters/handlers/CustomExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/api/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/api/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/entities/ErrorResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/entities/MensagemErroPadrao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/entities/MensagemErroPadrao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/entities/dbEntities/ClienteEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/entities/dbEntities/ClienteEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/dbconnection/RepositoryCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/dbconnection/RepositoryCliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/gateways/ClienteGateway.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/gateways/ClienteGateway.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/usecases/ClienteUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/interfaces/usecases/ClienteUseCase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/br/com/fiap/techchallenge/lanchonete/LanchoneteApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/br/com/fiap/techchallenge/lanchonete/api/ClienteControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/br/com/fiap/techchallenge/lanchonete/api/ClienteControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/br/com/fiap/techchallenge/lanchonete/adapters/mappers/ClienteMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/br/com/fiap/techchallenge/lanchonete/adapters/mappers/ClienteMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacoco/test.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.adapters.mappers/ClienteMapperImpl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.adapters.mappers/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.adapters.mappers/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.api/ClienteController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.api/ClienteController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.api/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.api/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.gateways/ClienteGatewayImpl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.gateways/ClienteGatewayImpl.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.gateways/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.gateways/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.usecases/ClienteUseCaseImpl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.usecases/ClienteUseCaseImpl.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.usecases/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/br.com.fiap.techchallenge.lanchonete.usecases/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/branchfc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/branchnc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/branchpc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/bundle.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/class.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/greenbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/group.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/method.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/package.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/redbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/report.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/session.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/sort.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/source.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-resources/up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoReport/jacoco-sessions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/lanchonete-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/lanchonete-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.fiap.techchallenge.lanchonete.api.ClienteControllerTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.fiap.techchallenge.lanchonete.gateways.ClienteGatewayImplTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.fiap.techchallenge.lanchonete.usecases.ClienteUseCaseImplTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.fiap.techchallenge.lanchonete.adapters.mappers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.fiap.techchallenge.lanchonete.api.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.fiap.techchallenge.lanchonete.gateways.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.fiap.techchallenge.lanchonete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.fiap.techchallenge.lanchonete.usecases.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.fiap.techchallenge.lanchonete.LanchoneteApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.fiap.techchallenge.lanchonete.adapters.mappers.ClienteMapperTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.fiap.techchallenge.lanchonete.api.ClienteControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.fiap.techchallenge.lanchonete.gateways.ClienteGatewayImplTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.fiap.techchallenge.lanchonete.usecases.ClienteUseCaseImplTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/jacocoagent.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/org/jacoco/agent/AgentJar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/org/jacoco/agent/package-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jacocoTestCoverageVerification/success.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/adapters/handlers/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/adapters/handlers/CustomExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/api/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/api/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/entities/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/entities/ErroResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/entities/dbEntities/ClienteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/entities/dbEntities/ClienteEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/dbconnection/RepositoryCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/dbconnection/RepositoryCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/gateways/ClienteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/gateways/ClienteGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/usecases/ClienteUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/interfaces/usecases/ClienteUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/api/ClienteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/api/ClienteControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/gateways/ClienteGatewayImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/1. build-test-publish.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/1. build-test-publish.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +61,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/br/com/fiap/techchallenge/lanchonete/bdd" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -195,22 +76,101 @@
     <option name="myCommands">
       <command value="gradle clean" />
       <command value="gradle clean build" />
+      <command value="gradle clean cucumber" />
+      <command value="gradle cucumber" />
+      <command value="gradle buid sonar --info" />
+      <command value="gradle build sonar --info" />
+      <command value="gradle build sonar" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.api-lanchonete-cliente [clean build]">
-    <configuration name="api-lanchonete-cliente [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.api-lanchonete-cliente [build sonar]">
+    <configuration name="api-lanchonete-cliente" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="MONGODB_URI" value="mongodb://user:pass@localhost:27017/cliente?authSource=admin" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="br.com.fiap.techchallenge.lanchonete.LanchoneteApplication" />
+      <module name="lanchonete-cliente.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: cliente" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cliente.feature" />
+      <option name="GLUE" value="br.com.fiap.techchallenge.lanchonete.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="lanchonete-cliente.test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: cliente" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CucumberTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.techchallenge.lanchonete.bdd.CucumberTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="api-lanchonete-cliente [buid sonar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--info" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buid" />
+            <option value="sonar" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="api-lanchonete-cliente [build sonar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--info" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
             <option value="build" />
+            <option value="sonar" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -220,7 +180,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="api-lanchonete-cliente [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="api-lanchonete-cliente [clean cucumber]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -232,6 +192,7 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
+            <option value="cucumber" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -241,10 +202,21 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.api-lanchonete-cliente" />
+      <item itemvalue="Cucumber Java.Feature: cliente" />
+      <item itemvalue="Gradle.CucumberTest" />
+      <item itemvalue="Gradle.api-lanchonete-cliente [clean cucumber]" />
+      <item itemvalue="Gradle.api-lanchonete-cliente [buid sonar]" />
+      <item itemvalue="Gradle.api-lanchonete-cliente [build sonar]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.api-lanchonete-cliente [clean build]" />
-        <item itemvalue="Gradle.api-lanchonete-cliente [clean]" />
+        <item itemvalue="Gradle.api-lanchonete-cliente [build sonar]" />
+        <item itemvalue="Gradle.api-lanchonete-cliente [buid sonar]" />
+        <item itemvalue="Gradle.CucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: cliente" />
+        <item itemvalue="Gradle.api-lanchonete-cliente [clean cucumber]" />
       </list>
     </recent_temporary>
   </component>
@@ -383,5 +355,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fiap/techchallenge/lanchonete/usecases/ClienteUseCaseImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
