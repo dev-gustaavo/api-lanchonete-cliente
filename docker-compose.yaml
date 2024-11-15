@@ -6,7 +6,7 @@ services:
     container_name: lanchonete-app-cliente
     image: gtbarbosa/fiap-tech-challenge-lanchonete-api-cliente:latest
     ports:
-      - 8282:8282
+      - 8080:8080
     networks:
       - lanchonete-network
     depends_on:

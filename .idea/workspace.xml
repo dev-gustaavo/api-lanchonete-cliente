@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="674b5a55-cb44-496f-b3bc-05088e507b44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/1. build-test-publish.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/1. build-test-publish.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/4. deploy-eks.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes/banco_dados/db-secret.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes/banco_dados/pod-db.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/aplicacao/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/aplicacao/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/aplicacao/svc-lanchonete.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/aplicacao/svc-lanchonete.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/banco_dados/mysql-secret.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/banco_dados/pod-mysql.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/banco_dados/svc-mysql.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/banco_dados/svc-db.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/configmap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/configmap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/hpa.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/hpa.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
