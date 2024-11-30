@@ -10,13 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Esperar Aprovação
-        uses: askuia/github-actions-approval@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          approval_message: "Aprovar o deploy no cluster EKS"
-          timeout: 30m # Tempo limite para aprovação (30 minutos)
-
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -50,6 +43,8 @@ jobs:
 
   pr-to-main-branch:
     runs-on: ubuntu-latest
+    needs:
+      - approve-and-deploy
 
     steps:
       - name: Checkout code
