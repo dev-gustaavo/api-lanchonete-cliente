@@ -25,4 +25,4 @@ RUN apt-get update && apt-get install -y curl \
 
 ENTRYPOINT ["/app/wait-for-it.sh", "mongo-db:27017", "--", "java", "-jar", "/app/lanchonete-cliente-app.jar"]
 
-EXPOSE 8282
+EXPOSE 80
