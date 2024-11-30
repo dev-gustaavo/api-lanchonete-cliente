@@ -1,6 +1,7 @@
-# Tech Challenge - API Lanchonete
+# Tech Challenge - API Cliente Lanchonete
 
-API resopnsável por gerenciar clientes, produtos e pedidos de uma lanchonete.
+
+API resopnsável por gerenciar o cadastro de clientes da Lanchonete.
 
 # Pré-requisitos
 1. Docker
@@ -18,38 +19,44 @@ API resopnsável por gerenciar clientes, produtos e pedidos de uma lanchonete.
 1. Acesse via terminal a pasta do projeto
 2. Execute em ordem os comandos abaixo: 
 ```bash
-kubectl apply -f kubernetes/  # você vai configurar o configmap, o hpa e as métricas do cluster
-cd kubernetes                 # você vai acessar a pasta com os demais arquivos do cluster kubernetes
-kubectl apply -f banco_dados/ # você vai aplicar os arquivos necessários para subir o banco de dados 
-kubectl apply -f aplicacao/   # você vai aplicar os arquivos necessários para subir a aplicação
+kubectl apply -f kubernetes --recursive  # você vai criar todos os recursos kubernetes que estão dentro da pasta 'kubernetes/'
 ```
 
 ### Obs.: Caso esteja utilizando o minikube para rodar seu cluster local, é necessário executar o campo abaixo:
 ```bash
-kubectl get svc # neste comando você listará todas as services. Localize a service do app (svc-lanchonete-app)
-kubectl port-forward svc-lanchonete-app 8080:80 # neste comando você vai direcionar todas as chamadas da porta 8080 para a porta 80 do cluster
+kubectl get svc # neste comando você listará todas as services. Localize a service do app (svc-lanchonete-app-cliente)
+kubectl port-forward svc-lanchonete-app-cliente 8080:80 # neste comando você vai direcionar todas as chamadas da porta 8080 para a porta 80 do cluster
 ```
 
 #### Após os passos acima, a API estará funcionando e será possível realizar as operações, conforme descrito abaixo.
 
 # Passo a passo funcional da API
+1. Ao subir a aplicação, acesse o swagger [clicando aqui](http://localhost:8080/swagger-ui/index.html)
+2. Ao acessar o swagger você poderá executar as operações disponíveis
+   1. `POST /cliente` para cadastrar um novo cliente
+   2. `GET /cliente` para listar todos os clientes cadastrados
+   3. `DELETE /cliente/{cpf}` para deletar um cliente já cadastrado
+   4. `PUT /cliente` para alterar um cliente já cadastrado
+   5. `GET /cliente/{cpf}` para buscar um cliente por CPF
 
-### Para um bom funcionamento da API, siga o passo a passo abaixo: 
-1. Primeiro, cadastre um produto, utilizando a rota ```POST``` /produto
-2. Após, você já está apto para cadastrar um pedido. Capture o id do produto que foi cadastrado e para cadastrar um 
-pedido utilize a rota ```POST``` /pedido
-3. Para gerar o QR Code para o pagamento do pedido, utilize a rota ```POST``` /pedido/gerar/qr_code/{numeroPedido}, 
-informando o número do pedido gerado anteriormente. Vale lembrar que o QR Code gerado é apenas um mock
-4. Após, para simular o webhook de notificação do pagamento, utilize a rota `POST` /pedido/webhook/notificacao/pagamento, 
-informando o `statusPagamento: PAGO`
-5. Para consultar o andamento do pedido, você pode utilizar a rota `GET` /pedido/consultar/status/pagamento/{numeroPedido}, 
-informando o número do pedido gerado anteriormente
-6. Para listar todos os pedidos, utilize a rota `GET` /pedido/listar
 
-### Além disso, você também poderá:
-1. Editar, deletar ou listar por categoria um produto
-2. Listar todos os pedidos com status pago
-3. Cadastrar, listar, editar, deletar ou listar por CPF um cliente
+
+# Comandos úteis para o Kubernetes
+
+### Apontar para o Kubernetes para seu cluster EKS AWS
+```bash
+aws eks update-kubeconfig --name eks-lanchonete --region us-east-1
+```
+
+### Deletar todos os recursos Kubernetes de uma só vez
+```bash
+kubectl delete all --all -n <namespace>
+```
+
+### Criar todos os recursos dentro do cluster de uma só vez
+```bash
+kubectl apply -f <path to files> --recursive
+```
 
 # Documentações
 
