@@ -8,4 +8,4 @@ spring:
       show-sql: ${SHOW_SQL:true}
 
 server:
-  port: ${APP_PORT:8282}
+  port: ${APP_PORT:80}
