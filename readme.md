@@ -31,38 +31,45 @@ kubectl port-forward svc-lanchonete-app-cliente 8080:80 # neste comando você va
 #### Após os passos acima, a API estará funcionando e será possível realizar as operações, conforme descrito abaixo.
 
 # Passo a passo funcional da API
-1. Ao subir a aplicação, acesse o swagger [clicando aqui](http://localhost:8080/swagger-ui/index.html)
-2. Ao acessar o swagger você poderá executar as operações disponíveis
-   1. `POST /cliente` para cadastrar um novo cliente
-   2. `GET /cliente` para listar todos os clientes cadastrados
-   3. `DELETE /cliente/{cpf}` para deletar um cliente já cadastrado
-   4. `PUT /cliente` para alterar um cliente já cadastrado
-   5. `GET /cliente/{cpf}` para buscar um cliente por CPF
 
+### **Operações Disponíveis nesta API**
+![POST](https://img.shields.io/badge/POST-green?style=for-the-badge)  
+**Rota:** `/cliente`  
+**Descrição:** Realiza o cadastro de um cliente.  
+**Body:**
 
-
-# Comandos úteis para o Kubernetes
-
-### Apontar para o Kubernetes para seu cluster EKS AWS
-```bash
-aws eks update-kubeconfig --name eks-lanchonete --region us-east-1
+```json
+{
+   "nome": "string",
+   "email": "string",
+   "cpf": "string"
+}
 ```
 
-### Deletar todos os recursos Kubernetes de uma só vez
-```bash
-kubectl delete all --all -n <namespace>
-```
+![GET](https://img.shields.io/badge/GET-blue?style=for-the-badge)  
+**Rota:** `/cliente`  
+**Descrição:** Realiza a busca de uma lista de clientes.  
 
-### Criar todos os recursos dentro do cluster de uma só vez
-```bash
-kubectl apply -f <path to files> --recursive
-```
+![GET](https://img.shields.io/badge/GET-blue?style=for-the-badge)  
+**Rota:** `/cliente/{cpf}`  
+**Descrição:** Realiza a busca de um cliente por CPF.
+
+![PUT](https://img.shields.io/badge/PUT-orange?style=for-the-badge)  
+**Rota:** `/cliente/{cpf}`  
+**Descrição:** Realiza a alteração de um cliente por CPF.
+
+![DELETE](https://img.shields.io/badge/DELTE-red?style=for-the-badge)  
+**Rota:** `/cliente/{cpf}`  
+**Descrição:** Realiza a exclusão de um cliente por CPF.
 
 # Documentações
 
 Link da documentação com o desenho do DDD: [Clique aqui para acessar o Miro](https://miro.com/app/board/uXjVKHPTdLg=/?share_link_id=544608334788)
 <br>
 Após subir a aplicação, para acessar o Swagger [Clique aqui](http://localhost:8080/swagger-ui/index.html)
+
+# Relatório de cobertura de teste
+![relatorio-teste.png](relatorio-teste.png)
 
 # Desenho de arquitetura do projeto
 
